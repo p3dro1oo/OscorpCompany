@@ -1,0 +1,502 @@
+body {
+    background-color: #ffffff;
+    width: 100%;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    color: #000000d7;
+}
+
+
+
+header {
+    height: 4em;
+    background-color: transparent;
+    z-index: 1;
+    width: 100%;
+    height: 5em;
+    background-color: #000000f5;
+
+}
+
+.nav {
+    height: 2.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav .oscorp-logo {
+    font-size: 30px;
+    letter-spacing: 6px;
+    margin: 1em 0 0 .8em;
+    color: #ffffff;
+    margin-left: 1.5em;
+
+}
+
+.nav-list {
+    display: flex;
+    gap: 32px;
+    margin-top: .5em;
+
+}
+
+.headerLi {
+    font-size: 11px;
+}
+
+.headerLi a {
+    color: #ffffff;
+}
+
+.headerLi a:hover {
+    color: #009400;
+}
+
+.hamburger {
+    border: none;
+    background: none;
+    border-top: 3px solid #ffffff;
+    cursor: pointer;
+    display: none;
+    margin-left: 12em;
+    margin-right: 4em;
+    margin-top: 2.5em;
+
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin-top: 5px;
+    position: relative;
+    transition: .3s;
+
+}
+
+
+/*Header Mobile*/
+@media (max-width: 750px) {
+    header {
+        z-index: 2;
+        margin-bottom: 2em;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(0, 0, 0);
+        clip-path: circle(100px at 90% -15%);
+        transition: .5s ease;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+
+        pointer-events: none;
+        margin: 0;
+
+    }
+
+    .nav-list a {
+        font-size: 24px;
+        opacity: 0;
+        color: #ffffff;
+    }
+
+    .nav-list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
+
+    .nav-list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
+
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+
+    /* Estilos ativos */
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+
+    .nav.active .hamburger {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    .nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+/*Fim do Menu Mobile*/
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+article {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 5em;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+article h2 {
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 1em;
+}
+
+article p {
+    width: 75%;
+    margin: 0 auto;
+    line-height: 20px;
+    margin-bottom: 2em;
+}
+
+article img {
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+}
+
+.artigo2 h2,
+.artigo3 h2 {
+    text-align: center;
+}
+
+
+footer {
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.oscorp-img {
+    width: 8em;
+
+}
+
+.login {
+    color: #000000;
+    margin-top: 1em;
+    font-family: Orbitron;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.login:hover {
+    color: #009400;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav .oscorp-logo {
+        font-size: 44px;
+    }
+
+    .nav-list {
+        margin-top: 2em;
+        margin-left: 10em;
+    }
+
+    .nav-list a {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .legenda {
+        left: 10em;
+        bottom: 6em;
+    }
+
+    .legenda .title {
+        font-size: 32px;
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 8px;
+    }
+
+
+    .btn {
+        background: none;
+        border: 2px solid #ffffff;
+        text-transform: uppercase;
+        padding: 12px 20px;
+        min-width: 200px;
+        padding-bottom: 2em;
+        marker-start: 10px;
+        cursor: pointer;
+        transition: color 0.4s linear;
+        position: relative;
+        transform: translate(-50%, -50%);
+        left: 7.5em;
+        color: #fff;
+    }
+
+    .btn:hover {
+        color: #000000;
+    }
+
+    .btn::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        z-index: -1;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    }
+
+    .btn::before {
+        transform: scaleX(0);
+    }
+
+    .btn:hover::before {
+        transform: scaleX(1);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .navegation {
+        margin-top: 2em;
+        margin-bottom: 4em;
+        position: relative;
+        right: 13.8em;
+    }
+
+    .navegation ul {
+        display: flex;
+    }
+
+    .navegation li {
+        padding-left: 3em;
+    }
+
+    article {
+        text-align: justify;
+        width: 100%;
+        margin-bottom: 10em;
+    }
+
+    article h2 {
+        text-align: center;
+        /* Centraliza o texto h2 horizontalmente */
+        font-family: Roboto;
+        font-size: 30px;
+        letter-spacing: 1px;
+        margin-bottom: 1em;
+    }
+
+    article p {
+        text-align: justify;
+        /* Centraliza o texto p horizontalmente */
+        font-family: Roboto;
+        width: 50em;
+        margin: 0 auto;
+        margin-bottom: 4em;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .project-img img {
+        box-shadow: 0 1px 2px #0003;
+        width: 70%;
+
+    }
+
+    .swiper {
+        height: 500px;
+        width: 80em;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .nav .oscorp-logo {
+        font-size: 44px;
+    }
+
+    .nav-list {
+        margin-top: 2em;
+        margin-left: 10em;
+    }
+
+    .nav-list a {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .legenda {
+        left: 10em;
+        bottom: 6em;
+    }
+
+    .legenda .title {
+        font-size: 32px;
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 8px;
+    }
+
+
+    .btn {
+        background: none;
+        border: 2px solid #ffffff;
+        text-transform: uppercase;
+        padding: 12px 20px;
+        min-width: 200px;
+        padding-bottom: 2em;
+        marker-start: 10px;
+        cursor: pointer;
+        transition: color 0.4s linear;
+        position: relative;
+        transform: translate(-50%, -50%);
+        left: 7.5em;
+        color: #fff;
+    }
+
+    .btn:hover {
+        color: #000000;
+    }
+
+    .btn::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        z-index: -1;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    }
+
+    .btn::before {
+        transform: scaleX(0);
+    }
+
+    .btn:hover::before {
+        transform: scaleX(1);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .navegation {
+        margin-top: 2em;
+        margin-bottom: 4em;
+        position: relative;
+        right: 13.8em;
+    }
+
+    .navegation ul {
+        display: flex;
+    }
+
+    .navegation li {
+        padding-left: 3em;
+    }
+
+    article {
+        text-align: justify;
+        width: 100%;
+        margin-top: 2em;
+        margin-bottom: 3em;
+    }
+
+    article h2 {
+        text-align: center;
+        /* Centraliza o texto h2 horizontalmente */
+        font-family: Roboto;
+        font-size: 30px;
+        letter-spacing: 1px;
+        margin-bottom: 1em;
+    }
+
+    article p {
+        text-align: justify;
+        /* Centraliza o texto p horizontalmente */
+        font-family: Roboto;
+        width: 50em;
+        margin: 0 auto;
+        margin-bottom: 4em;
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 1.8em;
+    }
+
+    article img {
+        width: 100%;
+        height: 30em;
+        object-fit: cover;
+    }
+
+
+
+
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto+Mono&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Raleway:wght@100&family=Roboto+Mono&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@600&family=Raleway:wght@100&family=Roboto+Mono&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}

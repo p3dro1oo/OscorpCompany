@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/Imagens/IconOscorp.ico">
+    <title>Oscorp</title>
+    <link rel="stylesheet" href="assets/CSS/singIn.css">
+    <link rel="stylesheet" href="assets/CSS/Normalize.css">
+    <script defer src="assets/Javascript/script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+
+            <h1 class="oscorp-logo">OSCORP</h1>
+
+
+            <ul class="nav-list">
+                <li class="headerLi"><a href="index.html">Home</a></li>
+                <li class="headerLi"><a href="whoWeAre.html" target="_blank">Who we are?</a></li>
+                <li class="headerLi"><a href="oscorpLeaders.html">Oscorp Leaders</a></li>
+                <li class="headerLi"><a href="singIn.html">Sing In</a></li>
+                <li class="headerLi"><a href="#">Sign up</a></li>
+                <li class="headerLi"><a href="#">Restricted area</a></li>
+
+            </ul>
+            <button class="hamburger"></button>
+        </nav>
+    </header>
+
+    <h1 class="h1">Formulário de Login</h1>
+    <form action="processar_login.php" method="POST">
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+</body>
+
+</html>
+
+
